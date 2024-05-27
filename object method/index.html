@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>object method</title>
+  <style>
+     body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f0f0f0; /* Light background for better contrast */
+    }
+    .container {
+      display: grid;
+      grid-template-rows: auto auto;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      width: 80%;
+      margin: 20px auto;
+    }
+    .container > .section:first-child {
+      grid-column: span 2;
+    }
+    .section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      border: 8px solid rgba(3, 3, 250, 0.685); /* Semi-transparent blue border */
+      background-color: #ffffff; /* White background for the sections */
+      color: #ff8c00; /* Dark orange text for contrast */
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    }
+    .section h2 {
+      margin-bottom: 10px;
+    }
+    .section p {
+      margin: 5px 0;
+    }
+    .section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      border: 8px solid rgba(3, 3, 250, 0.685);
+      background-color: #ffffff; /* White background for the sections */
+      color: #e69737; /* Dark orange text for contrast */
+      border-radius: 12px;
+    }
+    .button {
+      margin-top: 10px;
+      border: none;
+      border-radius: 8px;
+      padding: 10px;
+      background-color: rgb(171, 240, 9);
+      box-shadow: 2px 2px 3px, 1px 2px 4px;
+    }
+    .section img {
+      height: 100px;
+      width: 100px;
+    }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Product Section -->
+    <div class="section" id="product-section">
+      <h2>Product Information</h2>
+      <img src="https://www.fjallraven.com/4959f6/globalassets/catalogs/fjallraven/f2/f242/f24210/f560/7392158958184_ss18_a_foldsack_no1_21.jpg?width=680&height=680&rmode=BoxPad&bgcolor=fff&quality=100" alt="">
+      <p><strong>Title:</strong> Fjallraven Foldsack No. 1 Backpack, Fits 15 Laptops</p>
+      <p><strong>Price:</strong> $109.95</p>
+      <p><strong>Description:</strong> Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday</p>
+      <p><strong>Category:</strong> Men's clothing</p>
+      <p><strong>Rating:</strong> [2, 4, 1, 0, 5, 3]</p>
+      <button class="button" onclick="showProductRating()">Calculate Average Rating</button>
+      <p id="product-rating"></p>
+    </div>
+
+    <!-- Employee Section -->
+    <div class="section" id="employee-section">
+      <h2>Employee Information</h2>
+      <p><strong>Name:</strong> John Doe</p>
+      <p><strong>Position:</strong> Software Engineer</p>
+      <p><strong>Department:</strong> IT</p>
+      <p><strong>Days Off:</strong> Monday, Friday</p>
+      <button class="button" onclick="checkEmployeeDayOff()">Is Today a Day Off?</button>
+      <p id="employee-day-off"></p>
+    </div>
+
+    <!-- Employee2 Section -->
+    <div class="section" id="employee2-section">
+      <h2>Employee Information</h2>
+      <p><strong>Name:</strong> Jane Smith</p>
+      <p><strong>Position:</strong> Project Manager</p>
+      <p><strong>Department:</strong> Management</p>
+      <p><strong>Experience:</strong> 5 years</p>
+      <p><strong>Performance:</strong> 4.5</p>
+      <button class="button" onclick="checkEmployeeIncrement()">Is Eligible for Increment?</button>
+      <p id="employee-increment"></p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
